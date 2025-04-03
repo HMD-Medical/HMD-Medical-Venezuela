@@ -1,0 +1,3 @@
+name = "hmd-medical-website"
+compatibility_date = "2025-04-02"
+assets = { directory = "dist"}
