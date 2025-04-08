@@ -164,282 +164,221 @@ main {
 }
 
 
-
+@media (max-width: 424px){
+    .logo-navbar{
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 320px){
+    .logo-navbar{
+        font-size: 1rem;
+    }
+}
 
 
 /* ========================================================
    3. Footer
    ======================================================== */
-h4 {
+   h4 {
     font-weight: 300;
-    font-size: 1.25em;
-}
-
-.general-footer h3 {
-    font-size: 1.5em;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
 }
 
 footer {
     background: white;
+    border-top: 1.5px solid #ededed;
+    padding: 1rem 0 3rem;
     position: relative;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-top: 1.5px solid rgb(237, 237, 237);
     z-index: 100;
-    padding-bottom: 50px;
-
 }
 
 .top-footer {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-bottom: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    border-bottom: 1.5px solid rgb(237, 237, 237);
-
+    padding: 1.5rem 0;
+    border-bottom: 1.5px solid #ededed;
+    gap: 1rem;
 }
 
 .top-footer img {
     max-width: 200px;
     height: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 1.25rem;
 }
 
 .text-top-footer {
-    font-size: 1.2rem;
-    padding: 20px;
+    font-size: 1.1rem;
+    padding: 0 1.25rem;
     line-height: 1.5;
-    text-align: justify;
+    max-width: 600px;
 }
 
 .container-footer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* Define dos columnas adaptativas */
-    align-items: start;
-    /* Alinea las secciones al inicio */
-    padding-bottom: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 1rem;
 }
 
 .general-footer {
     text-align: center;
     display: flex;
     flex-direction: column;
-    /* Elementos alineados verticalmente */
     align-items: center;
-    justify-content: start;
-    padding-left: 30px;
-    padding-right: 30px;
+    gap: 0.75rem;
+    padding: 0 1rem;
 }
 
 .atencion-cliente-footer {
     display: flex;
     flex-direction: column;
-    /* Elementos alineados verticalmente */
     align-items: center;
+    gap: 0.5rem;
 }
 
 .horarios-atencion p {
-    margin: 2px;
-    font-size: 1em;
-}
-
-.atencion-cliente-footer h3 {
-    margin-bottom: 6px;
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
 }
 
 .dias {
     color: var(--color-primario);
+    font-weight: 600;
 }
 
 .paginas-footer {
     display: flex;
     flex-direction: column;
-    /* Elementos alineados verticalmente */
-    align-items: flex-start;
-    /* Alinea los elementos al inicio */
-    padding-left: 30px;
-    padding-right: 30px;
-
+    align-items: center;
+    padding: 0 1rem;
 }
 
 .paginas-footer ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
-.paginas-footer ul li {
-    margin: 5px;
+.paginas-footer li {
+    margin: 0.5rem 0;
     position: relative;
+    transition: transform 0.2s ease;
 }
 
-.paginas-footer ul li:hover::before {
-    content: '>  ';
-    color: var(--color-primario);
-    /* Color en hover */
-    font-weight: 700;
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.paginas-footer ul li::before {
-    content: '>  ';
-    color: var(--color-primario);
-    font-weight: 700;
-    opacity: 0;
-    transform: translateX(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-@keyframes arrowAppear {
-    0% {
-        opacity: 0;
-        transform: translateX(-250px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.paginas-footer li:hover {
+    transform: translateX(5px);
 }
 
 .paginas-footer a {
+    color: #333;
     text-decoration: none;
-    color: black;
     position: relative;
-    /* Añadido */
-    transition: color 0.3s ease;
-
-}
-
-.paginas-footer a:hover {
-    color: var(--color-primario);
-    /* Color en hover */
-    font-weight: 700;
+    padding-left: 1.2rem;
 }
 
 .paginas-footer a::before {
-    content: '';
+    content: '›';
     position: absolute;
-    top: 100%;
     left: 0;
-    background: var(--color-primario);
-    width: 0;
-    height: 2px;
-    transition: width 0.3s ease;
+    color: var(--color-primario);
+    font-weight: 700;
+    opacity: 0;
+    transition: opacity 0.2s ease;
 }
 
 .paginas-footer a:hover::before {
-    width: 100%;
-    /* Expande la línea al 100% */
+    opacity: 1;
 }
 
 .boton-footer {
-    margin-top: 1em;
-    padding: 0.5em 1em;
+    margin-top: 1rem;
+    padding: 0.75rem 2rem;
     background-color: var(--color-primario);
     color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    /* Agregar transición para el transform */
+    border-radius: 2rem;
+    transition: all 0.2s ease;
 }
 
 .boton-footer:hover {
-    background-color: var(--color-primario);
-    transform: scale(1.1);
-    font-weight: 500;
-
-}
-
-.email-info,
-.instagram-info {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    margin-top: 1em;
-}
-
-.instagram-info a {
-    color: black;
-    text-decoration: none;
-}
-
-.instagram-info:hover,
-.instagram-info a:hover {
-    color: var(--color-primario);
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.email-info:hover,
-.email-info a:hover {
-    color: var(--color-primario);
-    text-decoration: none;
-    font-weight: 700;
+    transform: scale(1.05);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
 .bottom-footer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    border-top: 1px solid #ededed;
+    flex-wrap: wrap;
+}
+
+.email-info, .instagram-info {
+    display: flex;
     align-items: center;
-    border-top: 1px solid rgb(237, 237, 237);
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.instagram-info a {
+    color: inherit;
+    transition: color 0.2s ease;
+}
+
+.email-info:hover, .instagram-info:hover {
+    color: var(--color-primario);
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    .text-top-footer {
-        font-size: 0.9rem;
+    .top-footer {
+        flex-direction: column;
+        text-align: center;
     }
-
-    .top-footer img {
-        max-width: 150px;
-        height: auto;
-        padding-left: 20px;
-        padding-right: 20px;
+    
+    .container-footer {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
-
+    
+    .paginas-footer ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
     .bottom-footer {
         flex-direction: column;
         align-items: center;
-        gap: 1em;
-        /* Aumenta el espacio entre elementos */
+        gap: 1rem;
     }
+}
 
-    .email-info,
-    .instagram-info {
+@media (max-width: 480px) {
+    .text-top-footer {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .top-footer img {
+        max-width: 180px;
+    }
+    
+    .boton-footer {
         width: 100%;
-        justify-content: center;
+        max-width: 250px;
     }
-
-    .instagram-info a {
-        word-wrap: break-word;
+    
+    .paginas-footer a {
+        padding-left: 0;
     }
-
-    .general-footer h3,
-    .general-footer h4 {
-        font-size: 1em;
-    }
-
-    .container-footer>* {
-        margin-bottom: 2em;
+    
+    .paginas-footer a::before {
+        display: none;
     }
 }
-
-@media (max-width: 320px) {
-    .horarios-atencion p {
-        margin: 4px;
-        padding: 0px 6px;
-        font-size: 0.9em;
-    }
-}
-
-
-
 
 
 /* ========================================================
@@ -515,6 +454,7 @@ footer {
 /* ========================================================
    5. Página de Contacto
    ======================================================== */
+/* Estilos base para la página de contacto */
 .contact-page {
     background-image: url('assets/backgroundContacto.png');
     background-size: cover;
@@ -528,7 +468,6 @@ footer {
     padding: 2em;
     flex-direction: column;
     position: relative;
-    /* Esto es importante para el pseudo-elemento */
     margin-top: 70px;
 }
 
@@ -543,13 +482,13 @@ footer {
     z-index: 1;
 }
 
+/* Contenedor de información de contacto */
 .contact-info {
     margin: 1em auto;
     padding: 20px 40px;
     width: 100%;
     max-width: 100vh;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.6);
-    ;
     border: 1.5px solid rgb(237, 237, 237);
     border-radius: 8px;
     background-color: #fff;
@@ -565,29 +504,9 @@ footer {
 .contact-info p {
     text-align: center;
     color: var(--color-primario);
-
 }
 
-.adicional-contact {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2em;
-}
-
-/* > indica el elemento inmediato dentro de la clase */
-.adicional-contact>div {
-    flex: 1;
-    min-width: 200px;
-    border-right: 1.5px solid rgba(0, 0, 0, 0.2);
-    padding-right: 1.5em;
-}
-
-.adicional-contact>div:last-child {
-    border-right: none;
-    padding-right: 0;
-}
-
+/* Elementos de información individuales */
 .info-item {
     display: flex;
     align-items: center;
@@ -600,10 +519,13 @@ footer {
     border-radius: 10px;
     background-color: #f9f9f9;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .info-item a {
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
 }
 
 .info-item:hover {
@@ -622,6 +544,28 @@ footer {
     color: white;
 }
 
+/* Sección de contacto adicional (redes sociales y nosotros) */
+.adicional-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2em;
+    width: 100%;
+}
+
+.adicional-contact > div {
+    flex: 1;
+    min-width: 200px;
+    border-right: 1.5px solid rgba(0, 0, 0, 0.2);
+    padding-right: 1.5em;
+}
+
+.adicional-contact > div:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+/* Estilo para el enlace de Instagram */
 .instagram-info-contact {
     display: flex;
     align-items: center;
@@ -631,7 +575,6 @@ footer {
     margin: 1em auto;
     width: 100%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* Sombra ligera */
     border: 1.5px solid rgb(237, 237, 237);
     border-radius: 10px;
     background-color: #f9f9f9;
@@ -651,100 +594,91 @@ footer {
 .instagram-info-contact a {
     text-decoration: none;
     color: inherit;
-    transition: color 0.3s ease-in-out, font-weight 0.3s ease;
 }
 
-.instagram-info-contact:hover a {
-    color: white;
-    font-weight: 700;
+/* Estilos para el enlace "Nosotros" */
+.instagram-info-contact > a {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
 }
 
-.instagram-info-contact .fa-instagram {
-    font-size: 1.5em;
-    color: inherit;
-    transition: color 0.3s ease-in-out;
-}
-
-.instagram-info-contact:hover .fa-instagram {
-    color: white;
-}
-
+/* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
-    .contact-icon {
-        display: none;
-    }
-
     .adicional-contact {
         flex-direction: column;
         align-items: center;
+        gap: 1em;
     }
 
-    .adicional-contact>div {
+    .adicional-contact > div {
+        width: 100%;
         padding-right: 0;
-        margin-bottom: 1em;
         border-right: none;
-        /* El borde se elimina cuando está en columna */
-
         border-bottom: 1.5px solid rgba(0, 0, 0, 0.2);
         padding-bottom: 1.5em;
+        margin-bottom: 1em;
     }
 
-    .adicional-contact>div:last-child {
-        border-bottom: 0;
+    .adicional-contact > div:last-child {
+        border-bottom: none;
         padding-bottom: 0;
+        margin-bottom: 0;
     }
-
+    .telf-contact, .emailContact, .direccion-contact, .instagram-info-contact {
+        font-size: 1em;
+    }
 }
 
-/* Para pantallas con un ancho máximo de 424px */
-@media (max-width: 424px) {
-    .contact-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
+@media (max-width: 576px) {
+    .contact-info h2{
+        font-size: 1.5em;
+    }
+    .contact-info p {
+        font-size: 0.8em;
+    }
+    .contact-icon{
+        font-size: 1em;
+    }
+    .contact-info {
+        padding: 15px 20px;
     }
 
     .info-item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1em;
-        position: relative;
-        cursor: pointer;
+        padding: 0.8em 1em;
+        flex-direction: column;
+        text-align: center;
     }
 
-    .telf-contact {
-        display: inline-block
+    .contact-icon {
+        margin-bottom: 0.5em;
     }
 
-    .email-contact,
-    .direccion-contact {
-        display: none;
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.3s ease;
+    .telf-contact, .emailContact, .direccion-contact, .instagram-info-contact {
+        font-size: 1em;
     }
-
-    .info-item:hover .email-contact,
-    .info-item:hover .direccion-contact {
-        display: inline;
-        /* Mostrar el texto */
-        visibility: visible;
-        opacity: 1;
-        transition: opacity 0.3s ease;
-        font-size: 0.8rem;
-    }
-
-    .info-item:hover .contact-icon {
-        opacity: 0;
-    }
-
 }
 
+@media (max-width: 424px) {
+    .contact-info {
+        padding: 10px 15px;
+    }
 
+    .info-item {
+        padding: 0.5em 0.7em;
+        flex-direction: column;
+        text-align: center;
+    }
 
+    .contact-icon {
+        margin-bottom: 0;
 
+    }
+
+    .telf-contact, .emailContact, .direccion-contact {
+        font-size: 0.8em;
+    }
+}
 
 /* ========================================================
    7. Página de Inicio
@@ -1697,7 +1631,6 @@ footer {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    /* Fondo oscuro semitransparente */
     z-index: 0;
 }
 
@@ -1709,7 +1642,6 @@ footer {
     position: relative;
     font-weight: 600;
     text-align: center;
-    /* Asegura que el texto se centre */
 }
 
 .second-section-about-us {
@@ -1731,7 +1663,6 @@ footer {
     color: white;
     background: var(--color-primario);
     transition: width 0.3s ease;
-    /* Transición suave en el ancho */
 }
 
 .content-second-section-about h1 {
@@ -1749,16 +1680,9 @@ footer {
     background-size: cover;
     background-position: center;
     transition: width 0.3s ease;
-    /* Transición suave en el ancho */
     width: 50%;
-    /* Ajustamos al 50% inicialmente */
-    height: auto;
-    /* Alto automático inicialmente */
     aspect-ratio: 16 / 9;
-    /* Proporción de aspecto para mantener la relación */
     min-height: 300px;
-    /* Altura mínima para asegurar visibilidad */
-
 }
 
 .third-section-about-us {
@@ -1779,6 +1703,7 @@ footer {
 .vision {
     flex: 1;
     text-align: left;
+    transition: all 0.3s ease;
 }
 
 .mision h1,
@@ -1833,147 +1758,111 @@ footer {
     color: white;
 }
 
-/* Ajuste para que el último elemento ocupe todo el ancho */
 .valor:last-child {
     grid-column: 1 / -1;
 }
-
-
-@media (max-width: 1024px) {
-    .third-section-about-us {
-        flex-direction: column;
-        gap: 2rem;
-        padding: 20px;
-    }
-
-    .mision,
-    .vision,
-    .valores {
-        width: 100%;
-    }
-}
-
 
 .products-section {
     width: 100%;
     padding: 5rem 2rem;
     background-color: #f9fafc;
-  }
-  
-  .products-container {
+}
+
+.products-container {
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .section-header {
+}
+
+.section-header {
     text-align: center;
     margin-bottom: 3rem;
-  }
-  
-  .section-header h2 {
+}
+
+.section-header h2 {
     font-size: 2.5rem;
     color: var(--color-primario);
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-  }
-  
-  .section-description {
+}
+
+.section-description {
     font-size: 1.1rem;
     color: #555;
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
-  }
-  
-  .products-grid {
+}
+
+.products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-  }
-  
-  .product-card {
+}
+
+.product-card {
     background: white;
     border-radius: 12px;
     padding: 2rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-left: 4px solid var(--color-primario);
-  }
-  
-  .product-card:hover {
+}
+
+.product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  }
-  
-  .product-icon {
+}
+
+.product-icon {
     font-size: 2.5rem;
     color: var(--color-primario);
     margin-bottom: 1rem;
-  }
-  
-  .product-card h3 {
+}
+
+.product-card h3 {
     font-size: 1.5rem;
     color: var(--color-primario);
     margin-bottom: 0.5rem;
-  }
-  
-  .product-subtitle {
+}
+
+.product-subtitle {
     font-size: 0.9rem;
     color: #666;
     font-weight: 500;
     margin: 1rem 0 0.5rem;
     line-height: 1.4;
-  }
-  
-  .product-description {
+}
+
+.product-description {
     font-size: 1rem;
     color: #444;
     line-height: 1.6;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .products-section {
-      padding: 3rem 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .third-section-about-us {
+        padding: 50px 20px;
     }
-    
-    .section-header h2 {
-      font-size: 2rem;
-    }
-    
-    .section-description {
-      font-size: 1rem;
-    }
-    
-    .products-grid {
-      grid-template-columns: 1fr;
-    }
-  }
+}
+
 @media (max-width: 768px) {
     .first-section-about-us {
         padding: 4rem 3rem;
     }
 
-    .fourth-section-about-us {
-        padding: 20px 0px;
-    }
-
-
     .first-section-about-us h1 {
         font-size: 2rem;
-        /* Reducir tamaño de texto en móviles */
     }
 
     .second-section-about-us {
         flex-direction: column;
-        /* Apilar elementos verticalmente */
     }
 
     .content-second-section-about,
     .img-second-section-about {
         width: 100%;
-        /* Ancho completo para ambos bloques */
     }
 
     .content-second-section-about {
@@ -1990,33 +1879,76 @@ footer {
 
     .img-second-section-about {
         height: 200px;
-        /* Altura fija para asegurar que la imagen sea visible */
     }
 
-    .productos-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    /* Mejoras específicas para Misión/Visión */
+    .mision-vision-container {
+        flex-direction: column;
+        gap: 2.5rem;
     }
 
-    .mision h1,
-    .vision h1,
-    .valores h1 {
+    .mision, .vision {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .mision h1, .vision h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .mision p, .vision p {
+        font-size: 1rem;
+        line-height: 1.6;
+        hyphens: auto;
+    }
+
+    .products-section {
+        padding: 3rem 1rem;
+    }
+
+    .section-header h2 {
         font-size: 2rem;
     }
 
-    .mision p,
-    .vision p {
-        font-size: 0.8rem;
+    .section-description {
+        font-size: 1rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 480px) {
+    .third-section-about-us {
+        padding: 20px;
+        margin: 2rem 0;
+    }
+
+    .mision, .vision {
+        padding: 1.2rem;
+    }
+
+    .mision h1, .vision h1 {
+        font-size: 1.6rem;
+    }
+
+    .mision p, .vision p {
+        font-size: 0.95rem;
+    }
+
     .valores-grid {
         grid-template-columns: 1fr;
-        /* Una sola columna en móviles */
     }
 }
 
+@media (hover: hover) {
+    .valor:hover {
+        transform: translateY(-5px);
+        background-color: var(--color-primario);
+    }
+}
 /********************************* NOSOTROS *********************************/
 /********************************* NOSOTROS *********************************/
 

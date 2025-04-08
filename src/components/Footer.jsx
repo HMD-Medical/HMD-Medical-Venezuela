@@ -23,18 +23,15 @@ const Footer = () => {
             <div className="container-footer">
                 
                 <div className="general-footer">
-                    <h4>¿Interesado en algún producto?</h4>
-                    <h3>¡Haz tu pedido ahora!</h3>
-                    <a href="https://api.whatsapp.com/message/MH253DEAQCSQK1?autoload=1&app_absent=0" target = "_blank" className="boton-footer">Contáctanos</a>
+                    <h3>¿Interesado en algún producto?</h3>
+                    <a href="https://api.whatsapp.com/message/MH253DEAQCSQK1?autoload=1&app_absent=0" target = "_blank" className="boton-footer">¡Haz tu pedido ahora!</a>
                 </div>
 
                 <div className="atencion-cliente-footer">
                     <h3><RiCustomerService2Fill /> Atención al Cliente</h3>
 
                     <div className="horarios-atencion">
-                        <p><b className="dias">Lunes a Jueves</b>: 7:30 - 12:00 y 13:00 - 16:00</p>
-                        <p><b className="dias">Viernes</b>: 7:30 - 12:00 y 13:00 - 15:00</p>
-                        <p><b className="dias">Fin de Semana/Feriados</b>: <i>Cerrado</i></p>
+                        <p><b className="dias">Consulta Nuestros Horarios</b></p>
                     </div>
                     
                 </div>

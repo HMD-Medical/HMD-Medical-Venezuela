@@ -3,6 +3,7 @@ import { FaHandHoldingMedical, FaUserDoctor } from "react-icons/fa6";
 import "../global.css";
 import { FaBriefcaseMedical, FaPumpMedical, FaPumpSoap } from "react-icons/fa";
 import { BiPlusMedical } from "react-icons/bi";
+import ContactFloatingButton from "../components/ContactFloatingButton";
 
 
 const Us = () => {
@@ -136,6 +137,7 @@ const Us = () => {
 
 
         </div>
+        <ContactFloatingButton />
 
     </>
 };
